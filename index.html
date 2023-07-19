@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="icon/svg" href="Fotos/logo.svg">
+    <title>Validación de formulario</title>
+</head>
+<body>
+
+     <h5>¿Necesitas hacernos una consulta?</h5>
+    <form action="enviar.php" method="POST" class="contacto__form">
+        <div class="contacto__form-row">
+            <label for="nombre" class="contacto__form-label">Nombre y Apellido</label>
+            <input id="nombre" name="nombre" type="text" class="contacto__form-input" required>
+        </div>
+        <div class="contacto__form-row">
+            <label for="mail" class="contacto__form-label">Email</label>
+            <input id="mail" name="mail" type="text" class="contacto__form-input" required>
+        </div>
+        <div class="contacto__form-row">
+            <label for="celular" class="contacto__form-label">Celular</label>
+            <input id="celular" name="celular" type="text" class="contacto__form-input" required>
+        </div>
+        <div class="contacto__form-row">
+            <label for="mensaje" class="contacto__form-label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" cols="30" rows="8" class="contacto__form-textarea" required></textarea>
+        </div>
+        <div class="contacto__form-button-cont">
+            <button type="submit" onclick="envio()" class="contacto__form-button" id="enviar">Enviar</button>
+        </div>
+    </form>
+    <div class="mensaje-exito"></div>
+<div class="mensaje-error"></div>
+
+
+<script src="scripts.js"></script>
+</body>
+</html>
